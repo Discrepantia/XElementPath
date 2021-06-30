@@ -5,7 +5,9 @@ Use it kind a like XPath to work through XML Documents
 ## example
 
 ```
+//This outputs all elements that match the path
 var content = xmldoc.GetElements($"//Child[@objectType = 'Type1' && @name = 'Name1']/Content").ToList();
+//This outputs all elements Content that match the path
 var contentText = xmldoc.GetElements($"//Child[@objectType = 'Type1' && @name = 'Name1']/Content/.").ToList();
 ```
 ```
