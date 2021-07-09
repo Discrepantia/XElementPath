@@ -2,6 +2,9 @@
 
 Use it kind a like XPath to work through XML Documents
 
+Add new operators and functions through the manager as needed. 
+-You can use AndOperator & LowerFunction as an example
+
 ## example
 
 ```
