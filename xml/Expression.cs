@@ -87,7 +87,6 @@ namespace System.Xml
                 blockBuilder.Append(ExpressionString[i]);
             }
 
-
             if (String.IsNullOrEmpty(ExpressionStep))
             {
                 ExpressionStep = blockBuilder.ToString();
@@ -125,10 +124,6 @@ namespace System.Xml
         {
             if (source is XmlElement node)
             {
-                if(ExpressionString == "//string[@name = 'target'")
-                {
-
-                }
                 if (ExpressionStep == "//")
                 {
                     foreach (var _child in node.IterateAll())
