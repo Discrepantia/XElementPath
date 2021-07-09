@@ -1,0 +1,9 @@
+C:\Users\rpe\Documents\MyCode\XPath\bin\Debug\netstandard2.0\XPath.deps.json
+C:\Users\rpe\Documents\MyCode\XPath\bin\Debug\netstandard2.0\XPath.dll
+C:\Users\rpe\Documents\MyCode\XPath\bin\Debug\netstandard2.0\XPath.pdb
+C:\Users\rpe\Documents\MyCode\XPath\obj\Debug\netstandard2.0\XPath.csproj.AssemblyReference.cache
+C:\Users\rpe\Documents\MyCode\XPath\obj\Debug\netstandard2.0\XPath.AssemblyInfoInputs.cache
+C:\Users\rpe\Documents\MyCode\XPath\obj\Debug\netstandard2.0\XPath.AssemblyInfo.cs
+C:\Users\rpe\Documents\MyCode\XPath\obj\Debug\netstandard2.0\XPath.csproj.CoreCompileInputs.cache
+C:\Users\rpe\Documents\MyCode\XPath\obj\Debug\netstandard2.0\XPath.dll
+C:\Users\rpe\Documents\MyCode\XPath\obj\Debug\netstandard2.0\XPath.pdb

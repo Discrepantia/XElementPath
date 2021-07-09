@@ -1,36 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using XElementPath;
 
 namespace System.Xml
 {
-
     /// <summary>
     /// Contains a Expression Condition used to Filter Extracted XML values
     /// </summary>
     public class ExpressionCondition : ExpressionStringBase
     {
-
-        #region Static
-
-        /// <summary>
-        /// Gets a List of all Programmed conditions
-        /// </summary>
-        public static List<OperatorBase> ImplementedConditions { get; }
-
-        /// <summary>
-        /// Initializes ExpressionCondition
-        /// </summary>
-        static ExpressionCondition()
-        {
-            ImplementedConditions = new List<OperatorBase>();
-            ImplementedConditions.Add(new EqualOperator());
-            ImplementedConditions.Add(new OrOperator());
-            ImplementedConditions.Add(new AndOperator());
-        }
-
-        #endregion
-
         #region Properties
 
         /// <summary>
@@ -58,7 +37,7 @@ namespace System.Xml
         /// </summary>
         public OperatorBase Operator { get; set; }
 
-        #endregion
+        #endregion Properties
 
         #region Constructors
 
@@ -78,7 +57,7 @@ namespace System.Xml
                 item = generate[i];
 
                 conditionChecker.Append(item);
-                if (ImplementedConditions.FirstOrDefault(x => x.Name.StartsWith(conditionChecker.ToString())) is OperatorBase co)
+                if (Manager.Operators.FirstOrDefault(x => x.Name.StartsWith(conditionChecker.ToString())) is OperatorBase co)
                 {
                     if (co.Name.Length == conditionChecker.Length)
                     {
@@ -112,7 +91,7 @@ namespace System.Xml
             }
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Methods
 
@@ -130,6 +109,7 @@ namespace System.Xml
 
             return Operator.Check(node, LeftFunction, RightFunction);
         }
+
         /// <summary>
         /// returns the Conditions result
         /// </summary>
@@ -140,8 +120,6 @@ namespace System.Xml
             yield return Operator.Check(node, LeftFunction, RightFunction) ? "1" : "0";
         }
 
-        #endregion
-
+        #endregion Methods
     }
-
 }

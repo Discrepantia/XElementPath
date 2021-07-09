@@ -2,13 +2,11 @@
 
 namespace System.Xml
 {
-
     /// <summary>
     /// Base Class for Operators
     /// </summary>
     public abstract class ExpressionStringBase
     {
-
         #region Properties
 
         /// <summary>
@@ -16,7 +14,7 @@ namespace System.Xml
         /// </summary>
         public string Expression { get; set; }
 
-        #endregion
+        #endregion Properties
 
         #region Constructors
 
@@ -29,19 +27,17 @@ namespace System.Xml
             Expression = content;
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Methods
 
         /// <summary>
-        /// Returns all Processed values of the function 
+        /// Returns all Processed values of the function
         /// </summary>
         /// <param name="node">The Node that will be processed</param>
         /// <returns>all Processed values of the function</returns>
         public abstract IEnumerable<string> GetValues(XmlLinkedNode node);
 
-        #endregion
-
+        #endregion Methods
     }
-
 }

@@ -1,12 +1,10 @@
 ﻿namespace System.Xml
 {
-
     /// <summary>
     /// BaseClass for Functions
     /// </summary>
     public abstract class FunctionBase
     {
-
         #region Properties
 
         /// <summary>
@@ -14,7 +12,7 @@
         /// </summary>
         public string Name { get; }
 
-        #endregion
+        #endregion Properties
 
         #region Constructors
 
@@ -27,7 +25,7 @@
             Name = GetFunctionName() + "(";
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Methods
 
@@ -44,8 +42,6 @@
         /// <returns>the result of the function</returns>
         public abstract string Process(string item);
 
-        #endregion
-
+        #endregion Methods
     }
-
 }

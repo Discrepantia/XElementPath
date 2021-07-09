@@ -3,13 +3,11 @@ using System.Text;
 
 namespace System.Xml
 {
-
     /// <summary>
     /// Contains a Expression used to Extract XML values
     /// </summary>
     public class Expression
     {
-
         #region Properties
 
         /// <summary>
@@ -32,7 +30,7 @@ namespace System.Xml
         /// </summary>
         public ExpressionCondition Condition { get; set; }
 
-        #endregion
+        #endregion Properties
 
         #region Constructors
 
@@ -101,8 +99,6 @@ namespace System.Xml
                 {
                     if (blockBuilder.ToString() != braceClose.ToString())
                     {
-
-
                         Condition.NextCondition = new ExpressionCondition(blockBuilder.ToString().Substring(1));
 
                         Condition.NextConditionOperator = new AndOperator();
@@ -111,12 +107,12 @@ namespace System.Xml
             }
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Methods
 
         /// <summary>
-        /// Returns the Expressions Child elements 
+        /// Returns the Expressions Child elements
         /// </summary>
         /// <param name="source">the source Node</param>
         /// <returns>the Expressions Child elements</returns>
@@ -171,7 +167,6 @@ namespace System.Xml
                             else
                             {
                                 yield return source;
-
                             }
                         }
                     }
@@ -179,8 +174,6 @@ namespace System.Xml
             }
         }
 
-        #endregion
-
+        #endregion Methods
     }
-
 }

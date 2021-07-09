@@ -1,4 +1,4 @@
-# XPath
+# XElementPath
 
 Use it kind a like XPath to work through XML Documents
 

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "iCE8gKGnGfqYvuy29Xb+PUV7NA/XVkOKldyVjuXb4/7lPAGe6PQlbDVY3a0s9/4pbT37WeuPRHSRcVIM7Clv/A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rpe\\Documents\\MyCode\\XPath\\XElementPath.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rpe\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\rpe\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

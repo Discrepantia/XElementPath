@@ -2,13 +2,11 @@
 
 namespace System.Xml
 {
-
     /// <summary>
     /// Base Class for Operators Conditions
     /// </summary>
     public abstract class OperatorBase
     {
-
         #region Properties
 
         /// <summary>
@@ -16,10 +14,10 @@ namespace System.Xml
         /// </summary>
         public string Name { get; set; }
 
-        #endregion
+        #endregion Properties
 
         #region Constructors
-        
+
         /// <summary>
         /// Initializes a new instance of <see cref="OperatorBase"/>
         /// </summary>
@@ -28,7 +26,7 @@ namespace System.Xml
             Name = GetName();
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Methods
 
@@ -65,8 +63,6 @@ namespace System.Xml
         /// <returns>the Operators result</returns>
         public abstract bool InnerCheck(string left, string right);
 
-        #endregion
-
+        #endregion Methods
     }
-
 }

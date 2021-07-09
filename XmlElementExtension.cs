@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using XmlElement = System.Xml.XmlElement;
 
 namespace System.Xml
 {
@@ -11,7 +8,6 @@ namespace System.Xml
     /// </summary>
     public static partial class XmlElementExtension
     {
-
         #region Methods
 
         /// <summary>
@@ -28,6 +24,7 @@ namespace System.Xml
                 yield return item;
             }
         }
+
         /// <summary>
         /// Extracts the selected node.
         /// </summary>
@@ -36,7 +33,7 @@ namespace System.Xml
         /// <returns>extracted nodes</returns>
         public static object GetFirstElement(this XmlDocument source, string expression)
         {
-           return source.GetElements(expression).FirstOrDefault();
+            return source.GetElements(expression).FirstOrDefault();
         }
 
         /// <summary>
@@ -52,7 +49,6 @@ namespace System.Xml
             {
                 yield return item;
             }
-
         }
 
         /// <summary>
@@ -65,6 +61,7 @@ namespace System.Xml
         {
             return source.GetElements(path).FirstOrDefault();
         }
+
         /// <summary>
         /// Extracts the Children by their name. use * as wild card
         /// </summary>
@@ -137,12 +134,11 @@ namespace System.Xml
                     foreach (var _child in IterateAll(xe))
                     {
                         yield return _child;
-
                     }
                 }
             }
         }
 
-#endregion
+        #endregion Methods
     }
 }

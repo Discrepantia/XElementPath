@@ -1,40 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using XElementPath;
 
 namespace System.Xml
 {
-
     /// <summary>
     /// a Function for Strings, will be used as Default
     /// </summary>
     public class ExpressionString : ExpressionStringBase
     {
-        #region Static
-
-        /// <summary>
-        /// Contains all implemented Functions
-        /// </summary>
-        public static List<FunctionBase> ValidFunctions { get; }
-
-        /// <summary>
-        /// initializes stringFunction
-        /// </summary>
-        static ExpressionString()
-        {
-            ValidFunctions = new List<FunctionBase>();
-            ValidFunctions.Add(new LowerFunction());
-            ValidFunctions.Add(new UpperFunction());
-        }
-
-        #endregion
-
         #region Properties
 
         /// <summary>
         /// The Expression of the Function
         /// </summary>
-        public Expression Expression { get; set; }
+        public new Expression Expression { get; set; }
 
         /// <summary>
         /// The Function of the Expression
@@ -46,7 +27,7 @@ namespace System.Xml
         /// </summary>
         public ExpressionString NextExpression { get; set; }
 
-        #endregion
+        #endregion Properties
 
         #region Constructors
 
@@ -56,7 +37,7 @@ namespace System.Xml
         /// <param name="content">Content of the Function</param>
         public ExpressionString(string content) : base(content)
         {
-            if(String.IsNullOrEmpty(content))
+            if (String.IsNullOrEmpty(content))
             {
                 content = "//";
             }
@@ -75,7 +56,7 @@ namespace System.Xml
                     item = content[i];
 
                     conditionBuilder.Append(item);
-                    if (ValidFunctions.FirstOrDefault(x => x.Name.StartsWith(conditionBuilder.ToString())) is FunctionBase fu)
+                    if (Manager.Functions.FirstOrDefault(x => x.Name.StartsWith(conditionBuilder.ToString())) is FunctionBase fu)
                     {
                         Function = fu;
                     }
@@ -91,7 +72,7 @@ namespace System.Xml
             }
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Methods
 
@@ -117,12 +98,12 @@ namespace System.Xml
                     {
                         yield return Function?.Process(xt.InnerText) ?? xt.InnerText;
                     }
-                    else if(item is XmlElement xe)
+                    else if (item is XmlElement xe)
                     {
                         yield return xe.InnerText;
                     }
                     else
-                    {   
+                    {
                         yield return Function?.Process(item.ToString()) ?? item.ToString();
                     }
                 }
@@ -135,8 +116,6 @@ namespace System.Xml
             return InternalGetValues(node);
         }
 
-        #endregion
-
+        #endregion Methods
     }
-
 }
