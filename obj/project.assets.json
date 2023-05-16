@@ -181,22 +181,25 @@
   },
   "packageFolders": {
     "C:\\Users\\rpe\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rpe\\Documents\\MyCode\\XPath\\XElementPath.csproj",
+      "projectUniqueName": "C:\\repos\\own_gitRepo\\XElementPath\\XElementPath.csproj",
       "projectName": "XElementPath",
-      "projectPath": "C:\\Users\\rpe\\Documents\\MyCode\\XPath\\XElementPath.csproj",
+      "projectPath": "C:\\repos\\own_gitRepo\\XElementPath\\XElementPath.csproj",
       "packagesPath": "C:\\Users\\rpe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rpe\\Documents\\MyCode\\XPath\\obj\\",
+      "outputPath": "C:\\repos\\own_gitRepo\\XElementPath\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\rpe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -240,7 +243,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
